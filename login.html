@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Nature Camp Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+
+
+    
+    <!-- FontAwesome JS-->
+   
+
+<!-- 
+ <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script> -->
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/assets/css/theme-1.css">
+
+     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+</head> 
+<style>
+
+  #head{
+  width: 100%;
+   height: 80px; 
+   background-color:#000066; 
+   color: white;
+}
+#head img{
+  width: 100px;
+  height: 75px;
+  padding: 0px;
+  margin: 0px;
+}
+#head h1{
+  text-shadow: 2px 2px 4px #000000;
+  margin-left: 100px;
+}
+
+
+.bg-image {
+    background: url(bgimage.jpg) no-repeat 0px 0px;
+ /*   background: linear-gradient(to right, #b30000, #e65c00),*/
+  /*  url(imagea.jpg) no-repeat 0px 0px;*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 700px;
+    /*opacity: 0.5;*/
+
+}
+label{
+	font-weight: 700;
+}
+    </style>
+   
+    <body class="bg-image">
+        <!-- Navigation-->
+           <div id="head" class="justify-content-center">
+        <h4  class="align-bottom " style="color: white;"> 
+        <img src="govtlogo.png"   class="img-fluid" >Kerala Forest and Wildlife Department</h4>
+      </div>
+        <nav class="navbar navbar-expand-lg  fixed-top" id="mainNav">
+            <div class="container">
+              <!--   <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="" /></a> -->
+              
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Contact</a></li> 
+                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-sm btn-warning" href="dashboard.html">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-sm btn-warning" href="register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    
+<main class="login-form" style="margin-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center bg-success text-white" >LOGIN</div>
+                    <div class="card-body">
+                        <form action="" method="">
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="email_address" class="form-control form-control-sm" name="email-address" required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password" class="form-control form-control-sm" name="password" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Captcha</label>
+                                <div class="col-md-6">
+                                   <img src="captcha.png" style="width: 200px;height: 75px;">
+                                </div>
+                            </div> 
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right"></label>
+                                <div class="col-md-6">
+                                	<span style="font-size: 10px;">Type the characters shown above</span>
+                                    <input type="text" id="password" class="form-control form-control-sm" name="" required>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="col-md-6 offset-md-4">
+                                <a href="dashboard.html"   class="btn btn-primary btn-sm">
+                                    LOGIN
+                                </a>
+                                <a href="#" class="btn btn-link">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
