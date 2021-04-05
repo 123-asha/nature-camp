@@ -69,6 +69,9 @@
 label{
 	font-weight: 700;
 }
+small{
+    color:red;
+}
     </style>
    
     <body class="bg-image">
@@ -92,7 +95,7 @@ label{
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Contact</a></li> 
                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-sm btn-warning" href="dashboard.html">Login</a></li>
+                       <!--  <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-sm btn-warning" href="dashboard.html">Login</a></li> -->
                         <li class="nav-item"><a class="nav-link js-scroll-trigger btn btn-sm btn-warning" href="register.html">Register</a></li>
                     </ul>
                 </div>
@@ -107,11 +110,12 @@ label{
                 <div class="card">
                     <div class="card-header text-center bg-success text-white" >LOGIN</div>
                     <div class="card-body">
-                        <form action="" method="">
+                       <form name="loginForm" action="dashboard.html"  method="post"  id="form">
                             <div class="form-group row">
-                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Username</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control form-control-sm" name="email-address" required autofocus>
+                                    <input type="text" id="email" class="form-control form-control-sm" name="email" required autofocus>
+                                    <small id="email_msg">Please enter valid email</small>
                                 </div>
                             </div>
 
@@ -119,6 +123,7 @@ label{
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                                 <div class="col-md-6">
                                     <input type="password" id="password" class="form-control form-control-sm" name="password" required>
+                                    <small id="password_msg">Please enter valid password</small>
                                 </div>
                             </div>
 
@@ -133,7 +138,8 @@ label{
                                 <label for="password" class="col-md-4 col-form-label text-md-right"></label>
                                 <div class="col-md-6">
                                 	<span style="font-size: 10px;">Type the characters shown above</span>
-                                    <input type="text" id="password" class="form-control form-control-sm" name="" required>
+                                    <input type="text" id="captcha" class="form-control form-control-sm" name="captcha" required>
+                                    <small id="captcha_msg">Please enter captcha</small>
                                 </div>
                             </div>
 
@@ -148,9 +154,7 @@ label{
                             </div> -->
 
                             <div class="col-md-6 offset-md-4">
-                                <a href="dashboard.html"   class="btn btn-primary btn-sm">
-                                    LOGIN
-                                </a>
+                               <input type="submit" value="Login" class="btn btn-sm btn-success" id="login">
                                 <a href="#" class="btn btn-link">
                                     Forgot Your Password?
                                 </a>
@@ -167,15 +171,73 @@ label{
 
     
        
-    <!-- Javascript -->          
-    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <!-- Javascript -->         
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!--     <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  -->
     
     <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/style-switcher.js"></script>     
+ <!--    <script src="assets/js/demo/style-switcher.js"></script>     --> 
     
 
 </body>
+
+<script>
+  
+ $('#email_msg').css('display','none'); 
+ $('#password_msg').css('display','none'); 
+ $('#captcha_msg').css('display','none'); 
+
+ 
+
+/* var email=$('#email').val();*/
+
+ 
+
+$(document).ready(function(){
+    // Get value on button click and show alert
+    $("#login").click(function(){
+        var str = $("#email").val();
+        var password=$('#password').val();
+        var captcha=$('#captcha').val();
+        if(str !="naturecamp"){
+         $('#email_msg').css('display','block'); 
+        }
+        if(password !="password"){
+       $('#password_msg').css('display','block'); 
+        } 
+        if(captcha ==""){
+          $('#captcha_msg').css('display','block'); 
+        }
+
+  /*      function validateform(){
+          var str = $("#email").val();
+        var password=$('#password').val();
+        var captcha=$('#captcha').val();
+
+        if(str=="naturecamp" && password=="password" && captcha !=""){
+          return true;
+        } else
+        {
+          return false;
+        }
+
+        }*/
+
+            $("#form").submit(function(){
+                var str = $("#email").val();
+        var password=$('#password').val();
+        var captcha=$('#captcha').val();
+
+        if(str=="naturecamp" && password=="password" && captcha !=""){
+          return true;
+        } else
+        {
+          return false;
+        }
+            });
+    });
+});
+</script>
 </html> 
 
